@@ -46,7 +46,9 @@ namespace asasaasa.Controllers
             Company company = new Company();
             company.GetAll();
             Console.Write("Enter User Id : ");
-            return  company.GetEmployeeById(Convert.ToInt32(Console.ReadLine()));
+            int id = Convert.ToInt32(Console.ReadLine());
+            Emloyee emloyee = company.GetEmployeeById(id);
+            return emloyee != null ? emloyee : throw new EmployeeNotFound(ExceptionsMessage.exceptionsMessage);
             
         }
 

@@ -26,12 +26,8 @@ namespace asasaasa.Controllers
 
         public Emloyee GetEmployeeById(int id)
         {
-            if (emloyees.Count != 0)
-                foreach (var myItem in emloyees)
-                {
-                    if (myItem.Id == id)
-                        return myItem;
-                }
+            if (emloyees.Count != 0)                
+               return emloyees.Find(x => x.Id == id);
             return null;
         }
 
@@ -77,11 +73,11 @@ namespace asasaasa.Controllers
 
         public void GetAll()
         {
-            if(emloyees.Count != 0)
-                foreach (var myItem in emloyees)
+            if (emloyees.Count != 0)                
+                emloyees.ForEach(x =>
                 {
-                    Console.WriteLine(myItem);
-                }
+                    Console.WriteLine(x);
+                });
             else
                 throw new EmployeeNotFound(ExceptionsMessage.exceptionsMessage);
         }
