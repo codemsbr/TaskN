@@ -10,6 +10,22 @@ namespace asasaasa.Model
 {
     internal class Company
     {
+        static int id = 1;
+        public int Id { get; set; }
         public string Name { get; set; }
+
+        Company()
+        {
+            Id = id++;
+        }
+
+        public Company(string name)
+        {
+            Name = name;
+        }
+        public override string ToString()
+        {
+            return $"{Id} {Name}";
+        }
     }
 }

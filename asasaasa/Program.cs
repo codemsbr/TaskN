@@ -8,7 +8,7 @@ internal class Program
     static void Main(string[] args)
     {
         int userAnswer = 0;
-        for (; userAnswer != 6;)
+        for (; userAnswer != 14;)
         {
             try
             {
@@ -22,34 +22,60 @@ internal class Program
                         break;
 
                     case 2:
-                        Console.Write("Enter User Id : ");
-                        Console.WriteLine(EmployeeService.GetEmployeeById(Convert.ToInt32(Console.ReadLine())));
+                        Controller.CreateCompany();
                         break;
 
                     case 3:
+                        Console.Write("Enter Company Id : ");
+                        Console.WriteLine(CompanyService.GetCompanyeById(Convert.ToInt32(Console.ReadLine())));
+                        break;
+
+                    case 4:
+                        Console.Write("Enter Company Name : ");
+                        CompanyService.GetCompanysByValuesFragmentation(Console.ReadLine());
+                        break;
+
+                    case 5:
+                        Console.Write("Enter Emloyee Id : ");
+                        Console.WriteLine(EmployeeService.GetEmployeeById(Convert.ToInt32(Console.ReadLine())));
+                        break;
+
+                    case 6:
                         Console.Write("Enter User Name Or SurName : ");
                         EmployeeService.GetEmployeesByValuesFragmentation(Console.ReadLine());
                         break;
 
-                    case 4:
+                    case 7:
                         EmployeeService.GetLatestEmployeesFragmentation();
                         break;
 
-                    case 5:
+                    case 8:
+                        CompanyService.GetAll();
+                        break;
+
+                    case 9:
                         EmployeeService.GetAll();
                         break;
 
-                    case 6:
+                    case 10:
                         EmployeeService.UpdateEmployee(Controller.IdEmployee());
                         break;
 
-                    case 7:
+                    case 11:
+                        CompanyService.UpdateCompany(Controller.IdCompany());
+                        break;
+
+                    case 12:
+                        CompanyService.RemoveCompany(Controller.IdCompany());
+                        break;
+                    
+                    case 13:
                         EmployeeService.RemoveEmployee(Controller.IdEmployee());
                         break;
-                    
-                    case 8:                        
+
+                    case 14:
                         break;
-                    
+
                     default:
                         Console.WriteLine("Error");
                         break;

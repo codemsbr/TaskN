@@ -22,9 +22,9 @@ namespace asasaasa.Controllers
 
         public static Emloyee GetEmployeeById(int id)
         {
-            if (CompanyDataBase.emloyees.Count != 0)
-                return CompanyDataBase.emloyees.Find(x => x.Id == id);
-            return null;
+            if (CompanyDataBase.emloyees.Count != 0 && CompanyDataBase.emloyees.Any(x => x.Id == id))
+                    return CompanyDataBase.emloyees.Find(x => x.Id == id);
+            throw new EmployeeNotFound(ExceptionsMessage.EmployeeNotFoundMessage);
         }
 
         public static void GetEmployeesByValuesFragmentation(string value)

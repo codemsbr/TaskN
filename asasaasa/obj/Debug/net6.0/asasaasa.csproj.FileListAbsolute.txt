@@ -49,3 +49,10 @@ C:\Users\msbr\OneDrive\İş masası\TaskN\asasaasa\obj\Debug\net6.0\asasaasa.csp
 C:\Users\msbr\OneDrive\İş masası\TaskN\asasaasa\obj\Debug\net6.0\asasaasa.dll
 C:\Users\msbr\OneDrive\İş masası\TaskN\asasaasa\obj\Debug\net6.0\refint\asasaasa.dll
 C:\Users\msbr\OneDrive\İş masası\TaskN\asasaasa\obj\Debug\net6.0\asasaasa.pdb
+C:\Users\msbr\OneDrive\İş masası\TaskN\asasaasa\bin\Debug\net6.0\asasaasa.exe
+C:\Users\msbr\OneDrive\İş masası\TaskN\asasaasa\bin\Debug\net6.0\asasaasa.deps.json
+C:\Users\msbr\OneDrive\İş masası\TaskN\asasaasa\bin\Debug\net6.0\asasaasa.runtimeconfig.json
+C:\Users\msbr\OneDrive\İş masası\TaskN\asasaasa\bin\Debug\net6.0\asasaasa.dll
+C:\Users\msbr\OneDrive\İş masası\TaskN\asasaasa\bin\Debug\net6.0\asasaasa.pdb
+C:\Users\msbr\OneDrive\İş masası\TaskN\asasaasa\obj\Debug\net6.0\asasaasa.genruntimeconfig.cache
+C:\Users\msbr\OneDrive\İş masası\TaskN\asasaasa\obj\Debug\net6.0\ref\asasaasa.dll
