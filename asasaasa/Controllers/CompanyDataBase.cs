@@ -9,8 +9,7 @@ namespace asasaasa.Controllers
 {
     static class CompanyDataBase
     {
-        static List<Company> companies = new List<Company>();
-        static List<Emloyee> emloyees = new List<Emloyee>();
-
+       public static List<Company> companies = new List<Company>();
+       public static List<Emloyee> emloyees = new List<Emloyee>();
     }
 }

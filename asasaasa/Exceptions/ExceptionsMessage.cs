@@ -8,6 +8,7 @@ namespace asasaasa.Exceptions
 {
     internal class ExceptionsMessage
     {
-        public const string exceptionsMessage = "Employee Not Found";
+        public const string EmployeeNotFoundMessage = "Employee Not Found";
+        public const string InvalidNameOrSurNameException = "Name or Surname Not Found";
     }
 }

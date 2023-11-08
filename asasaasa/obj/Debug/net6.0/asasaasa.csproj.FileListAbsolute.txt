@@ -41,3 +41,11 @@ C:\Users\Birinci Novbe\Desktop\TaskN-master\asasaasa\obj\Debug\net6.0\refint\asa
 C:\Users\Birinci Novbe\Desktop\TaskN-master\asasaasa\obj\Debug\net6.0\asasaasa.pdb
 C:\Users\Birinci Novbe\Desktop\TaskN-master\asasaasa\obj\Debug\net6.0\asasaasa.genruntimeconfig.cache
 C:\Users\Birinci Novbe\Desktop\TaskN-master\asasaasa\obj\Debug\net6.0\ref\asasaasa.dll
+C:\Users\msbr\OneDrive\İş masası\TaskN\asasaasa\obj\Debug\net6.0\asasaasa.csproj.AssemblyReference.cache
+C:\Users\msbr\OneDrive\İş masası\TaskN\asasaasa\obj\Debug\net6.0\asasaasa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\msbr\OneDrive\İş masası\TaskN\asasaasa\obj\Debug\net6.0\asasaasa.AssemblyInfoInputs.cache
+C:\Users\msbr\OneDrive\İş masası\TaskN\asasaasa\obj\Debug\net6.0\asasaasa.AssemblyInfo.cs
+C:\Users\msbr\OneDrive\İş masası\TaskN\asasaasa\obj\Debug\net6.0\asasaasa.csproj.CoreCompileInputs.cache
+C:\Users\msbr\OneDrive\İş masası\TaskN\asasaasa\obj\Debug\net6.0\asasaasa.dll
+C:\Users\msbr\OneDrive\İş masası\TaskN\asasaasa\obj\Debug\net6.0\refint\asasaasa.dll
+C:\Users\msbr\OneDrive\İş masası\TaskN\asasaasa\obj\Debug\net6.0\asasaasa.pdb

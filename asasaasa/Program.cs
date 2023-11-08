@@ -8,7 +8,6 @@ internal class Program
     static void Main(string[] args)
     {
         int userAnswer = 0;
-        Company company = new Company();
         for (; userAnswer != 6;)
         {
             try
@@ -24,21 +23,33 @@ internal class Program
 
                     case 2:
                         Console.Write("Enter User Id : ");
-                        Console.WriteLine(company.GetEmployeeById(Convert.ToInt32(Console.ReadLine())));
+                        Console.WriteLine(EmployeeService.GetEmployeeById(Convert.ToInt32(Console.ReadLine())));
                         break;
 
                     case 3:
-                        company.GetAll();
+                        Console.Write("Enter User Name Or SurName : ");
+                        EmployeeService.GetEmployeesByValuesFragmentation(Console.ReadLine());
                         break;
 
                     case 4:
-                        company.UpdateEmployee(Controller.IdEmployee());
+                        EmployeeService.GetLatestEmployeesFragmentation();
                         break;
+
                     case 5:
-                        company.RemoveEmployee(Controller.IdEmployee());
+                        EmployeeService.GetAll();
                         break;
+
                     case 6:
+                        EmployeeService.UpdateEmployee(Controller.IdEmployee());
                         break;
+
+                    case 7:
+                        EmployeeService.RemoveEmployee(Controller.IdEmployee());
+                        break;
+                    
+                    case 8:                        
+                        break;
+                    
                     default:
                         Console.WriteLine("Error");
                         break;
@@ -47,6 +58,10 @@ internal class Program
                 Console.Clear();
             }
             catch (EmployeeNotFound ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (InvalidNameOrSurNameException ex)
             {
                 Console.WriteLine(ex.Message);
             }

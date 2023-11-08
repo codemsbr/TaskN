@@ -15,16 +15,17 @@ namespace asasaasa.Controllers
         {
             Console.WriteLine("1.Create Emloyee");
             Console.WriteLine("2.Get Emloyee Details by Id");
-            Console.WriteLine("3.Get All Emloyees");
-            Console.WriteLine("4.Update Employee Id");
-            Console.WriteLine("5.Delete Emloyee Details Id ");
-            Console.WriteLine("6.Exit");            
+            Console.WriteLine("3.Get Emloyee Details by Value");
+            Console.WriteLine("4.Black of the employees created in 1 week");
+            Console.WriteLine("5.Get All Emloyees");
+            Console.WriteLine("6.Update Employee Id");
+            Console.WriteLine("7.Delete Emloyee Details Id ");
+            Console.WriteLine("8.Exit");            
             Console.Write("User Answer : ");
         }
 
         public static void CreateEmloyee()
         {
-            Company company = new Company();
             Console.Write("Enter Name : ");
             string name = Console.ReadLine();
 
@@ -38,18 +39,24 @@ namespace asasaasa.Controllers
             decimal salary = Convert.ToDecimal(Console.ReadLine());
             
             Emloyee emloyee = new(name, surName, age, GenderControler(), PositionControler(), salary);
-            company.AddEmployee(emloyee);
+            EmployeeService.AddEmployee(emloyee);
         }
 
         public static Emloyee IdEmployee()
         {
-            Company company = new Company();
-            company.GetAll();
+            EmployeeService.GetAll();
             Console.Write("Enter User Id : ");
             int id = Convert.ToInt32(Console.ReadLine());
-            Emloyee emloyee = company.GetEmployeeById(id);
-            return emloyee != null ? emloyee : throw new EmployeeNotFound(ExceptionsMessage.exceptionsMessage);
+            Emloyee emloyee = EmployeeService.GetEmployeeById(id);
+            return emloyee != null ? emloyee : throw new EmployeeNotFound(ExceptionsMessage.EmployeeNotFoundMessage);
             
+        }
+
+        public static void ValueEmployee()
+        {
+            EmployeeService.GetAll();
+            Console.Write("Enter User Name Or SurName : ");
+            EmployeeService.GetEmployeesByValuesFragmentation(Console.ReadLine());
         }
 
         public static void UpdateEmployeeMenu()
@@ -76,21 +83,21 @@ namespace asasaasa.Controllers
             Console.Write("Enter Position : ");
         }
 
-       public static Position PositionControler()
+        public static Position PositionControler()
         {
             PositionMenu();
             int position = Convert.ToInt32(Console.ReadLine());
             if (position > 1)
-                throw new EmployeeNotFound(ExceptionsMessage.exceptionsMessage);
+                throw new EmployeeNotFound(ExceptionsMessage.EmployeeNotFoundMessage);
             return (Position)position;
         }
 
-       public static Gender GenderControler()
+        public static Gender GenderControler()
         {
             GenderMenu();
             int gender = Convert.ToInt32(Console.ReadLine());
             if (gender > 2)
-                throw new EmployeeNotFound(ExceptionsMessage.exceptionsMessage);
+                throw new EmployeeNotFound(ExceptionsMessage.EmployeeNotFoundMessage);
             return (Gender)gender;
         }
     }

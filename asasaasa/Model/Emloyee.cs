@@ -12,6 +12,7 @@ namespace asasaasa.Model
         public decimal Salary { get; set; }
         public Position Position { get; set; }
         public Gender Gender { get; set; }
+        public DateTime CreatedAt { get; } = DateTime.Now;
 
         public Emloyee()
         {
